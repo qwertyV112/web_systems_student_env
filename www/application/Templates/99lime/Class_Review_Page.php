@@ -13,5 +13,8 @@ class ReviewLimePage extends Template{
     }
     public function Person(){
         $this->Add("title",'Я Заголовок');
+        $this->Add("header",'1');
+        $this->Add("content",'2');
+        $this->Add("basement",'3');
     }
 }
