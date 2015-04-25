@@ -24,7 +24,7 @@ abstract Class Template{
         $this->Templates = new PHPTAL($this->File."/templates/".$this->index);
     }
     public function Add($Name, $Value){
-        $this->Templates->Name =$Value;
+        $this->Templates->$Name =$Value;
     }
     public function Start(){
         try {

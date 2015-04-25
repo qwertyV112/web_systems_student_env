@@ -12,7 +12,6 @@ class ReviewLimePage extends Template{
         parent::__construct(__DIR__,$this->index);
     }
     public function Person(){
-        $this->Templates->title='Я Заголовок';
-        $this->Add('title','Я Заголовок');
+        $this->Add("title",'Я Заголовок');
     }
 }
