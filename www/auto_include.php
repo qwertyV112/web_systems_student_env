@@ -25,6 +25,7 @@ Class Avto_include{
     }
     public function Template(){
         include_once "core/PHPTAL/PHPTAL.php";
+        $this->LoadForeach("application/Templates/*/*.php");
     }
 }
 ?>

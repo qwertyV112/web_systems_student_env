@@ -61,7 +61,6 @@ class Routing {
         foreach (self::$token as $RuleName => $value) {
             $pattern = "|".self::RequireParemetr($value['pattern'],$value['ArticleID'])."|";
             if(preg_match_all($pattern, $url, $out)) {
-                var_dump( $pattern );
                   self::Callback($value['matches'],$out);
                     return;
             }
@@ -72,6 +71,7 @@ class Routing {
         call_user_func_array(array($callback['Module'], $callback['Sector']),$arguments);
     }
     public static function NotFound(){
+        echo("хуй");
      //  $Notfound= array('Module'=> 'NotFoundController','Sector'=>'Index');
        // self::Callback($Notfound);
     }
