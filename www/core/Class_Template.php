@@ -6,23 +6,30 @@
  * Time: 1:40
  */
 abstract Class Template{
-    public static $File;
-    public  static $Date;
-    public  static $Templates;
+    public  $File;
+    public  $Templates;
+    function __construct($Dir){
+        $this->$File = $Dir;
+    }
     public function FileLoading(){
-        self::$Templates = new PHPTAL(self::$File);
+        $this->$Templates = new PHPTAL(self::$File);
     }
     public function Add($Name, $Value){
-        self::$Templates->$Name =$Value;
+        $this->$Templates->$Name =$Value;
     }
     public function Start(){
         try {
-            echo self::$Templates->execute();
+            echo $this->$Templates->execute();
         }
         catch (Exception $e){
             echo $e;
         }
     }
     abstract public function Person();
+    public function Show(){
+        $this->FileLoading();
+        $this->Person();
+        $this->Start();
+    }
 
 }

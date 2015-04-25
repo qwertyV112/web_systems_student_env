@@ -30,15 +30,13 @@ class Routing {
         }
         return self::$_instance;
     }
-    public function Add($Rule){
+    public static function Add($Rule){
         array_push(self::$token,$Rule);
     }
-    public function debug(){
+    public static function debug(){
         var_dump(self::$token);
     }
-    public function set($array){
-   //     preg_replace($patterns, $replacements, $string);
-    }
+
     public static function RequireParemetr($token,$paremetrs)
     {
 
@@ -53,8 +51,9 @@ class Routing {
         }
         return $token;
     }
-  //  public function
-    public function Analysis($url)
+
+
+    public static function Analysis($url)
     {
         if(!isset(self::$token)){
             throw new Exception("Данный сайт находится в разработке");
@@ -62,22 +61,19 @@ class Routing {
         foreach (self::$token as $RuleName => $value) {
             $pattern = "|".self::RequireParemetr($value['pattern'],$value['ArticleID'])."|";
             if(preg_match_all($pattern, $url, $out)) {
+                var_dump( $pattern );
                   self::Callback($value['matches'],$out);
                     return;
             }
         }
         self::NotFound();
-      // echo("Хуййй");
-        //header("HTTP/1.0 404 Not Found");
    }
-    public function Callback($callback,$arguments){
-      //  var_dump($arguments);
-         // call_user_func(array($callback['Module'], $callback['Sector'])); //call_user_func_array
-        call_user_func_array(array($callback['Module'], $callback['Sector']),array("444","asdfada"));
+    public static function Callback($callback,$arguments){
+        call_user_func_array(array($callback['Module'], $callback['Sector']),$arguments);
     }
-    public function NotFound(){
-        $Notfound= array('Module'=> 'NotFoundController','Sector'=>'Index');
-        self::Callback($Notfound);
+    public static function NotFound(){
+     //  $Notfound= array('Module'=> 'NotFoundController','Sector'=>'Index');
+       // self::Callback($Notfound);
     }
 }
 

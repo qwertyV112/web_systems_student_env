@@ -11,5 +11,5 @@ Routing::Add(array(
         'Module' => 'HomeControler',
         'Sector' => 'ShowHome'),
     'ArticleID' => array(
-    'id'=> '\d+','goots'=>'\S+' )
+        'id'=> '\d+','goots'=>'\S+' )
 ));
