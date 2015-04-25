@@ -4,12 +4,13 @@
  * User: Web
  * Date: 25.04.2015
  * Time: 15:23
- */
-class ReviewLimePage extends Template{
-    private $page = null;
+*/
+
+class ReviewLimePassword extends Template{
+    private $Password = null;
      function __construct()
     {
-        $this->index = "index.xhtml";
+        $this->index = "password.xhtml";
         parent::__construct(__DIR__,$this->index);
     }
     public function Person(){

@@ -71,7 +71,7 @@ class Routing {
         call_user_func_array(array($callback['Module'], $callback['Sector']),$arguments);
     }
     public static function NotFound(){
-        echo("хуй");
+       // echo("хуй");
      //  $Notfound= array('Module'=> 'NotFoundController','Sector'=>'Index');
        // self::Callback($Notfound);
     }

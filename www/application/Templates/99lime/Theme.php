@@ -9,6 +9,10 @@
 class LimeTheme {
     private $views = array(
         'Page' => 'ReviewLimePage',
+        'TextField' => 'ReviewLimeTextField',
+        'ButtonField' => 'ReviewLimeButton',
+        'Password' => 'ReviewLimeRegField',
+        'Form' => 'ReviewLimeForm'
     );
 
     function GetView($view_name) {

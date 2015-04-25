@@ -14,8 +14,8 @@ abstract Class Template{
      * @param $Dir
      */
     function __construct($Dir,$index){
-        var_dump($Dir);
-        var_dump($index);
+       // var_dump($Dir);
+       // var_dump($index);
         $this->File = $Dir;
         $this->index = $index;
 
