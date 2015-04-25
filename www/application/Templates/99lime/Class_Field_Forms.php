@@ -15,8 +15,10 @@ class ReviewLimeForm extends Template{
     }
     public function Person(){
         $this->Add("title",'Я Заголовок');
-        $this->Add("header",'1');
-        $this->Add("content",'2');
-        $this->Add("basement",'ЖЕня хуй');
+        $this->Add("method",'1');
+        $this->Add("action",'2');
+        $this->Add("label",'ЖЕня хуй');
+        $this->Add("fields",'ЖЕня хуй');
+        $this->Add("errors",'ЖЕня хуй');
     }
 }

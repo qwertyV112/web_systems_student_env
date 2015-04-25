@@ -9,10 +9,6 @@ abstract Class Template{
     public  $File;
     public  $index;
     public  $Templates;
-
-    /**
-     * @param $Dir
-     */
     function __construct($Dir,$index){
        // var_dump($Dir);
        // var_dump($index);

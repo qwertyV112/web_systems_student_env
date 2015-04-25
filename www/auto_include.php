@@ -22,6 +22,8 @@ Class Avto_include{
     {
         $this->LoadForeach("application/*/Url.php");
         $this->LoadForeach("application/*/Controlers/*.php");
+        $this->LoadForeach("application/*/*/*.php");
+        $this->LoadForeach("application/*/*/*/*.php");
     }
     public function Template(){
         include_once "core/PHPTAL/PHPTAL.php";

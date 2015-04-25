@@ -1,16 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Web
- * Date: 12.03.2015
- * Time: 17:17
- */
-Routing::Add(array(
-    'pattern' => '/Forms/:Name',
-    'matches' => array(
-        'Module' => 'FormsController',
-        'Sector' => 'Index'),
-    'ArticleID' => array(
-        'Name'=> '\S+')
 
+Routing::Add(array(
+    'pattern' => '/user/:goots',
+    'matches' => array(
+        'Module' => 'AuthorizationForm',
+        'Sector' => 'process'),
+    'ArticleID' => array('goots'=>'\S+' )
 ));
